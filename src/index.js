@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Profile from './Profile/Profile';
+import Profile from './components/Profile/Profile';
 import user from './components/user.json';
 import statisticalData from './components/statistical-data.json';
-import Statistics from './Statistics/Statistics';
+import Statistics from './components/Statistics/Statistics';
 import friends from './components/friends.json';
-import FriendList from './FriendsList/FriendList';
-import TransactionHistory from './TransactionHistory/TransactionHistory';
+import FriendList from './components/FriendsList/FriendList';
+import TransactionHistory from './components/TransactionHistory/TransactionHistory';
 import transactions from './components/transactions.json';
 
 ReactDOM.render(
@@ -23,6 +23,8 @@ ReactDOM.render(
     {/* Статистика */}
     <Statistics title="Upload stats"
     stats={statisticalData} />
+    
+    {/* Друзья */}
     <FriendList friends={friends} />
     
     {/* Банк счет */}

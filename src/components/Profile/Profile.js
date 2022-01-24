@@ -1,6 +1,6 @@
 import React from 'react';
 import style from './Profile.module.css';
-import '../style.css'
+import '../../style.css'
 
 const Profile = ({ avatar, name, tag, location, followers, views,likes}) => {
     return (
