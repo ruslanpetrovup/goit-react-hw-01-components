@@ -1,7 +1,9 @@
 import React from 'react';
+import propTypes from 'prop-types';
 import style from './Statistics.module.css'
 
 const color = ["red", "blue", "teal", "green", "pink"];
+
 const Statistics = ({ title, stats }) => {
    return (
              <section className={style.statistics}>
@@ -19,5 +21,9 @@ const Statistics = ({ title, stats }) => {
             </ul>
         </section>
     )
+}
+Statistics.propTypes = {
+    title: propTypes.string,
+    stats: propTypes.array
 }
 export default Statistics

@@ -1,8 +1,9 @@
 import React from 'react';
 import style from './Profile.module.css';
+import propTypes from 'prop-types';
 import '../../style.css'
 
-const Profile = ({ avatar, name, tag, location, followers, views,likes}) => {
+const Profile = ({ avatar, name, tag, location, stats}) => {
     return (
     <div className={style.profile}>
   <div className={style.description}>
@@ -19,18 +20,25 @@ const Profile = ({ avatar, name, tag, location, followers, views,likes}) => {
   <ul className={style.stats}>
     <li className={style.stats__item}>
       <span className="label">Followers</span>
-      <span className="quantity"> {followers}</span>
+      <span className="quantity"> {stats.followers}</span>
     </li>
     <li className={style.stats__item}>
       <span className="label">Views</span>
-      <span className="quantity"> {views}</span>
+      <span className="quantity"> {stats.views}</span>
     </li>
     <li className={style.stats__item}>
       <span className="label">Likes</span>
-      <span className="quantity"> {likes}</span>
+      <span className="quantity"> {stats.likes}</span>
     </li>
   </ul>
 </div>
 )
+}
+Profile.propTypes = {
+  avatar: propTypes.string,
+  name: propTypes.string,
+  tag: propTypes.string,
+  location: propTypes.string,
+  stats: propTypes.array
 }
 export default Profile
